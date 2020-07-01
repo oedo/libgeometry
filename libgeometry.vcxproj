@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libgeometry</ProjectName>
+    <ProjectGuid>{9D37DA45-3740-46A4-B371-2BFF87B350D9}</ProjectGuid>
+    <RootNamespace>BoundaryEncoder</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;base;geometry;mesh;mesh_processing;curve;curve_processing;spatial;pointset;parameterization;WildMagic4\LibFoundation;WildMagic4\LibFoundation\Approximation;WildMagic4\LibFoundation\ComputationalGeometry;WildMagic4\LibFoundation\Containment;WildMagic4\LibFoundation\Curves;WildMagic4\LibFoundation\Distance;WildMagic4\LibFoundation\Interpolation;WildMagic4\LibFoundation\Intersection;WildMagic4\LibFoundation\LibFoundation.xcodeproj;WildMagic4\LibFoundation\Mathematics;WildMagic4\LibFoundation\Meshes;WildMagic4\LibFoundation\Miscellaneous;WildMagic4\LibFoundation\NumericalAnalysis;WildMagic4\LibFoundation\Surfaces;WildMagic4\LibFoundation\System;external\SparseMatrix;external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>libgeometry_pch.h</PrecompiledHeaderFile>
+      <ProgramDataBaseFileName>$(IntDir)libgeometry.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>libgeometry_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>gsi.lib;LibFoundation.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);..\GSI\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>copy WildMagic4\Library\Wm4Foundation90_MDD.lib lib\
+copy $(OutDir)libgeometry.lib lib\libgeometryd.lib
+copy $(OutDir)libgeometry.pdb lib\libgeometryd.pdb
+
+copy *.h include
+copy base\*.h include
+copy geometry\*.h include
+copy mesh\*.h include
+copy mesh_processing\*.h include
+copy curve\*.h include
+copy curve_processing\*.h include
+copy parameterization\*.h include
+copy segmentation\*.h include
+copy pointset\*.h include
+copy spatial\*.h include
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>.;base;geometry;mesh;mesh_processing;curve;curve_processing;spatial;pointset;parameterization;WildMagic4\LibFoundation;WildMagic4\LibFoundation\Approximation;WildMagic4\LibFoundation\ComputationalGeometry;WildMagic4\LibFoundation\Containment;WildMagic4\LibFoundation\Curves;WildMagic4\LibFoundation\Distance;WildMagic4\LibFoundation\Interpolation;WildMagic4\LibFoundation\Intersection;WildMagic4\LibFoundation\LibFoundation.xcodeproj;WildMagic4\LibFoundation\Mathematics;WildMagic4\LibFoundation\Meshes;WildMagic4\LibFoundation\Miscellaneous;WildMagic4\LibFoundation\NumericalAnalysis;WildMagic4\LibFoundation\Surfaces;WildMagic4\LibFoundation\System;external\SparseMatrix;external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>libgeometry_pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>libgeometry_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>gsi.lib;LibFoundation.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);..\GSI\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>copy WildMagic4\Library\Wm4Foundation90_MD.lib lib\
+copy $(OutDir)libgeometry.lib lib\libgeometry.lib
+
+copy *.h include
+copy base\*.h include
+copy geometry\*.h include
+copy mesh\*.h include
+copy mesh_processing\*.h include
+copy curve\*.h include
+copy curve_processing\*.h include
+copy parameterization\*.h include
+copy segmentation\*.h include
+copy pointset\*.h include
+copy spatial\*.h include
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="base\BitSet.h" />
+    <ClInclude Include="base\DynamicVector.h" />
+    <ClInclude Include="base\IterativeAlgorithm.h" />
+    <ClInclude Include="base\MemoryPool.h" />
+    <ClInclude Include="base\RefCountedVector.h" />
+    <ClInclude Include="base\SparseArray.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="curve\PolyLoop3.h" />
+    <ClInclude Include="curve_processing\LaplacianCurveDeformer.h" />
+    <ClInclude Include="geometry\Frame.h" />
+    <ClInclude Include="geometry\ISurfaceProjector.h" />
+    <ClInclude Include="geometry\LinearComplex2.h" />
+    <ClInclude Include="geometry\MatrixBlender.h" />
+    <ClInclude Include="geometry\PolyLine2.h" />
+    <ClInclude Include="geometry\VectorUtil.h" />
+    <ClInclude Include="geometry\WildMagic2Funcs.h" />
+    <ClInclude Include="geometry\WmlExtPlane3.h" />
+    <ClInclude Include="geometry\WmlPolygon2.h" />
+    <ClInclude Include="IGeometry.h" />
+    <ClInclude Include="lgcolors.h" />
+    <ClInclude Include="libgeometry_pch.h" />
+    <ClInclude Include="mesh\GSurface.h" />
+    <ClInclude Include="mesh\GSurfaceRenderer.h" />
+    <ClInclude Include="mesh\IDMap.h" />
+    <ClInclude Include="mesh\IMesh.h" />
+    <ClInclude Include="mesh\IMeshRenderer.h" />
+    <ClInclude Include="mesh\MeshIO.h" />
+    <ClInclude Include="mesh\MeshPolygons.h" />
+    <ClInclude Include="mesh\MeshSelection.h" />
+    <ClInclude Include="mesh\MeshSourceUtil.h" />
+    <ClInclude Include="mesh\SurfaceAreaSelection.h" />
+    <ClInclude Include="mesh\VertexSelection.h" />
+    <ClInclude Include="mesh\VFMeshMask.h" />
+    <ClInclude Include="mesh\VFMeshMerge.h" />
+    <ClInclude Include="mesh\VFMeshRenderer.h" />
+    <ClInclude Include="mesh\VFTriangleMesh.h" />
+    <ClInclude Include="mesh_processing\COILSBoundaryDeformer.h" />
+    <ClInclude Include="mesh_processing\DijkstraFrontProp.h" />
+    <ClInclude Include="mesh_processing\IDeformer.h" />
+    <ClInclude Include="mesh_processing\LaplacianDeformer.h" />
+    <ClInclude Include="mesh_processing\LaplacianSmoother.h" />
+    <ClInclude Include="mesh_processing\MeshCurvature.h" />
+    <ClInclude Include="mesh_processing\MeshFunction.h" />
+    <ClInclude Include="mesh_processing\MeshGeodesic.h" />
+    <ClInclude Include="mesh_processing\MeshInsertion.h" />
+    <ClInclude Include="mesh_processing\MeshLaplacian.h" />
+    <ClInclude Include="mesh_processing\MeshProjection.h" />
+    <ClInclude Include="mesh_processing\MeshSmoother.h" />
+    <ClInclude Include="mesh_processing\MeshSubdivider.h" />
+    <ClInclude Include="mesh_processing\MeshUtils.h" />
+    <ClInclude Include="mesh_processing\RotInvCoordDeformer.h" />
+    <ClInclude Include="mesh_processing\Triangulator2D.h" />
+    <ClInclude Include="mesh_processing\VertexWeights.h" />
+    <ClInclude Include="opengl.h" />
+    <ClInclude Include="parameterization\ExpMapGenerator.h" />
+    <ClInclude Include="parameterization\PlanarParameterization.h" />
+    <ClInclude Include="pointset\ParticleGrid.h" />
+    <ClInclude Include="rmsdebug.h" />
+    <ClInclude Include="rmsprofile.h" />
+    <ClInclude Include="segmentation\Segmentation.h" />
+    <ClInclude Include="spatial\DistanceCache.h" />
+    <ClInclude Include="spatial\IMeshBVTree.h" />
+    <ClInclude Include="spatial\IMeshUVBVTree.h" />
+    <ClInclude Include="spatial\NeighbourCache.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="curve\PolyLoop3.cpp" />
+    <ClCompile Include="curve_processing\LaplacianCurveDeformer.cpp" />
+    <ClCompile Include="geometry\Frame.cpp" />
+    <ClCompile Include="geometry\LinearComplex2.cpp" />
+    <ClCompile Include="geometry\MatrixBlender.cpp" />
+    <ClCompile Include="geometry\PolyLine2.cpp" />
+    <ClCompile Include="geometry\VectorUtil.cpp" />
+    <ClCompile Include="geometry\WmlExtPlane3.cpp" />
+    <ClCompile Include="geometry\WmlPolygon2.cpp" />
+    <ClCompile Include="libgeometry_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="mesh\GSurface.cpp" />
+    <ClCompile Include="mesh\GSurfaceRenderer.cpp" />
+    <ClCompile Include="mesh\IDMap.cpp" />
+    <ClCompile Include="mesh\IMesh.cpp" />
+    <ClCompile Include="mesh\IMeshRenderer.cpp" />
+    <ClCompile Include="mesh\MeshIO.cpp" />
+    <ClCompile Include="mesh\MeshPolygons.cpp" />
+    <ClCompile Include="mesh\MeshSelection.cpp" />
+    <ClCompile Include="mesh\SurfaceAreaSelection.cpp" />
+    <ClCompile Include="mesh\VertexSelection.cpp" />
+    <ClCompile Include="mesh\VFMeshMask.cpp" />
+    <ClCompile Include="mesh\VFMeshMerge.cpp" />
+    <ClCompile Include="mesh\VFMeshRenderer.cpp" />
+    <ClCompile Include="mesh\VFTriangleMesh.cpp" />
+    <ClCompile Include="mesh_processing\COILSBoundaryDeformer.cpp" />
+    <ClCompile Include="mesh_processing\LaplacianDeformer.cpp" />
+    <ClCompile Include="mesh_processing\LaplacianSmoother.cpp" />
+    <ClCompile Include="mesh_processing\MeshCurvature.cpp" />
+    <ClCompile Include="mesh_processing\MeshFunction.cpp" />
+    <ClCompile Include="mesh_processing\MeshGeodesic.cpp" />
+    <ClCompile Include="mesh_processing\MeshInsertion.cpp" />
+    <ClCompile Include="mesh_processing\MeshLaplacian.cpp" />
+    <ClCompile Include="mesh_processing\MeshProjection.cpp" />
+    <ClCompile Include="mesh_processing\MeshSmoother.cpp" />
+    <ClCompile Include="mesh_processing\MeshSubdivider.cpp" />
+    <ClCompile Include="mesh_processing\MeshUtils.cpp" />
+    <ClCompile Include="mesh_processing\RotInvCoordDeformer.cpp" />
+    <ClCompile Include="mesh_processing\Triangulator2D.cpp" />
+    <ClCompile Include="mesh_processing\VertexWeights.cpp" />
+    <ClCompile Include="parameterization\ExpMapGenerator.cpp" />
+    <ClCompile Include="parameterization\PlanarParameterization.cpp" />
+    <ClCompile Include="segmentation\Segmentation.cpp" />
+    <ClCompile Include="spatial\DistanceCache.cpp" />
+    <ClCompile Include="spatial\IMeshBVTree.cpp" />
+    <ClCompile Include="spatial\IMeshUVBVTree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="WildMagic4\LibFoundation\LibFoundation_VC90.vcxproj">
+      <Project>{9ce08aa4-9163-4a42-bcbf-e361b5ba5bc0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

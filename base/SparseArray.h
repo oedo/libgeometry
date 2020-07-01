@@ -80,12 +80,12 @@ public:
 		
 		assert(1==0); // "not yet moved to Linux"
 		
-		// T foo = m_vData.find(e)->val;
+		 T foo = m_vData.find(e)->val;
 		
-		// return foo;
+		 return foo;
 		
-		// std::set<EntryType>::iterator cur( m_vData.find(e) );
-		// return (*cur).val;
+		 std::set<EntryType>::iterator cur( m_vData.find(e) );
+		 return (*cur).val;
 	}
 	
 	inline const T & get( Index i ) const { 

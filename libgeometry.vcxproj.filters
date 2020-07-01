@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{208308b7-ca2e-4fe8-8591-de1331ee5ab6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="geometry">
+      <UniqueIdentifier>{7cade43b-c62a-406e-8168-7f14665b1448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mesh">
+      <UniqueIdentifier>{54b4e0e2-89d9-4f23-b952-3869aed546ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parameterization">
+      <UniqueIdentifier>{816211de-2058-4d18-9370-a49f7e001710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pointset">
+      <UniqueIdentifier>{46bb70a1-ce3f-4984-a1c4-1a04de06ddec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spatial">
+      <UniqueIdentifier>{7203176c-e631-4bda-a158-01a90515b8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mesh_processing">
+      <UniqueIdentifier>{d824b535-deb5-45f3-a235-f4681fb5ddf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="segmentation">
+      <UniqueIdentifier>{d318b749-50d2-4622-8e98-e20251d8ebff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="curve">
+      <UniqueIdentifier>{5c118894-6733-43c7-b722-268f0d6dee5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="curve_processing">
+      <UniqueIdentifier>{33e5b94d-b4b4-4ec7-a250-2ec0f51d3323}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base\BitSet.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\DynamicVector.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\IterativeAlgorithm.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\MemoryPool.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\RefCountedVector.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\SparseArray.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\Frame.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\ISurfaceProjector.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\LinearComplex2.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\MatrixBlender.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\PolyLine2.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\VectorUtil.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\WildMagic2Funcs.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\WmlExtPlane3.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\WmlPolygon2.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\GSurface.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\GSurfaceRenderer.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\IDMap.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\IMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\IMeshRenderer.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshIO.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshPolygons.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshSelection.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshSourceUtil.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\SurfaceAreaSelection.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\VertexSelection.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\VFMeshMask.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\VFMeshMerge.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\VFMeshRenderer.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\VFTriangleMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="parameterization\ExpMapGenerator.h">
+      <Filter>parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="parameterization\PlanarParameterization.h">
+      <Filter>parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="pointset\ParticleGrid.h">
+      <Filter>pointset</Filter>
+    </ClInclude>
+    <ClInclude Include="spatial\DistanceCache.h">
+      <Filter>spatial</Filter>
+    </ClInclude>
+    <ClInclude Include="spatial\IMeshBVTree.h">
+      <Filter>spatial</Filter>
+    </ClInclude>
+    <ClInclude Include="spatial\IMeshUVBVTree.h">
+      <Filter>spatial</Filter>
+    </ClInclude>
+    <ClInclude Include="spatial\NeighbourCache.h">
+      <Filter>spatial</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\COILSBoundaryDeformer.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\DijkstraFrontProp.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\IDeformer.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\LaplacianDeformer.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\LaplacianSmoother.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshCurvature.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshFunction.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshGeodesic.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshInsertion.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshLaplacian.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshProjection.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshSmoother.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshSubdivider.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\MeshUtils.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\RotInvCoordDeformer.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\Triangulator2D.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_processing\VertexWeights.h">
+      <Filter>mesh_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\Segmentation.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="curve\PolyLoop3.h">
+      <Filter>curve</Filter>
+    </ClInclude>
+    <ClInclude Include="curve_processing\LaplacianCurveDeformer.h">
+      <Filter>curve_processing</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="IGeometry.h" />
+    <ClInclude Include="lgcolors.h" />
+    <ClInclude Include="libgeometry_pch.h" />
+    <ClInclude Include="opengl.h" />
+    <ClInclude Include="rmsdebug.h" />
+    <ClInclude Include="rmsprofile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="geometry\Frame.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\LinearComplex2.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\MatrixBlender.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\PolyLine2.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\VectorUtil.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\WmlExtPlane3.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\WmlPolygon2.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\GSurface.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\GSurfaceRenderer.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\IDMap.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\IMesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\IMeshRenderer.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshIO.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshPolygons.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshSelection.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\SurfaceAreaSelection.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\VertexSelection.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\VFMeshMask.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\VFMeshMerge.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\VFMeshRenderer.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\VFTriangleMesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="parameterization\ExpMapGenerator.cpp">
+      <Filter>parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="parameterization\PlanarParameterization.cpp">
+      <Filter>parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="spatial\DistanceCache.cpp">
+      <Filter>spatial</Filter>
+    </ClCompile>
+    <ClCompile Include="spatial\IMeshBVTree.cpp">
+      <Filter>spatial</Filter>
+    </ClCompile>
+    <ClCompile Include="spatial\IMeshUVBVTree.cpp">
+      <Filter>spatial</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\COILSBoundaryDeformer.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\LaplacianDeformer.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\LaplacianSmoother.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshCurvature.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshFunction.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshGeodesic.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshInsertion.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshLaplacian.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshProjection.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshSmoother.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshSubdivider.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\MeshUtils.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\RotInvCoordDeformer.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\Triangulator2D.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_processing\VertexWeights.cpp">
+      <Filter>mesh_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\Segmentation.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="curve\PolyLoop3.cpp">
+      <Filter>curve</Filter>
+    </ClCompile>
+    <ClCompile Include="curve_processing\LaplacianCurveDeformer.cpp">
+      <Filter>curve_processing</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="libgeometry_pch.cpp" />
+  </ItemGroup>
+</Project>

@@ -4,6 +4,8 @@
 #ifndef __LIBGEOMETRY_PCH_H__
 #define __LIBGEOMETRY_PCH_H__
 
+//https://stackoverflow.com/questions/30811441/how-to-fix-hash-map-is-deprecated-and-will-be-removed-please-use-unordered
+#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS 1
 
 #include <Wm4AxisAlignedBox2.h>
 #include <Wm4Vector2.h>
