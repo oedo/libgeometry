@@ -90,7 +90,6 @@ copy spatial\*.h include
       <AdditionalIncludeDirectories>.;base;geometry;mesh;mesh_processing;curve;curve_processing;spatial;pointset;parameterization;WildMagic4\LibFoundation;WildMagic4\LibFoundation\Approximation;WildMagic4\LibFoundation\ComputationalGeometry;WildMagic4\LibFoundation\Containment;WildMagic4\LibFoundation\Curves;WildMagic4\LibFoundation\Distance;WildMagic4\LibFoundation\Interpolation;WildMagic4\LibFoundation\Intersection;WildMagic4\LibFoundation\LibFoundation.xcodeproj;WildMagic4\LibFoundation\Mathematics;WildMagic4\LibFoundation\Meshes;WildMagic4\LibFoundation\Miscellaneous;WildMagic4\LibFoundation\NumericalAnalysis;WildMagic4\LibFoundation\Surfaces;WildMagic4\LibFoundation\System;external\SparseMatrix;external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>libgeometry_pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
