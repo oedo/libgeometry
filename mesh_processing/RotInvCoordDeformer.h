@@ -68,7 +68,7 @@ protected:
 		Wml::Vector3f vLaplacian;			// current laplacian
 
 
-		VtxInfo() { }
+		//VtxInfo() { }
 	};
 	std::vector<VtxInfo> m_vVertices;
 	unsigned int m_nEdges;

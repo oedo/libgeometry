@@ -235,12 +235,6 @@ copy spatial\*.h include
     <ClCompile Include="spatial\IMeshBVTree.cpp" />
     <ClCompile Include="spatial\IMeshUVBVTree.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="WildMagic4\LibFoundation\LibFoundation_VC90.vcxproj">
-      <Project>{9ce08aa4-9163-4a42-bcbf-e361b5ba5bc0}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -33,14 +33,25 @@ public:
 	Frame3( const Wml::Vector3<Real> & vOrigin, const Wml::Vector3<Real> & vXAxis, const Wml::Vector3<Real> & vYAxis, const Wml::Vector3<Real> & vZAxis );
 
 	//! copy a reference frame
-	Frame3( const Frame3 & copy )
+	Frame3( const Frame3<Real> & copy )
 		: m_ptOrigin(copy.m_ptOrigin), m_vScale(copy.m_vScale), 
 		  m_matFrame(copy.m_matFrame), m_matFrameInverse(copy.m_matFrameInverse) {}
+
+	Frame3 & operator=(const Frame3<Real>& a) { return *this; }
 
 	//! create frame from matrices and origin
 	Frame3( const Wml::Matrix3<Real> & matFrame, const Wml::Matrix3<Real> & matFrameInverse, 
 			const Wml::Vector3<Real> & ptOrigin )
 			: m_ptOrigin( ptOrigin ), m_matFrame( matFrame ), m_matFrameInverse( matFrameInverse ) {}
+
+	void Set(const Wml::Matrix3<Real> & matFrame,
+		const Wml::Matrix3<Real> & matFrameInverse,
+		const Wml::Vector3<Real> & ptOrigin)
+	{
+		m_ptOrigin = ptOrigin;
+		m_matFrame = matFrame;
+		m_matFrameInverse = matFrameInverse;
+	}
 
 	~Frame3();
 
